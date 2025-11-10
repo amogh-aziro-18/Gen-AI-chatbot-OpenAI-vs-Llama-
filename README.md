@@ -47,61 +47,6 @@ It supports **contextual memory**, **semantic search (FAISS-like)**, and **side-
 
 ---
 
-##  Installation & Setup
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/yourusername/qa-multimodel-chatbot.git
-cd qa-multimodel-chatbot
-```
-
-### 2️⃣ Create and Activate a Virtual Environment
-```bash
-python -m venv venv
-source venv/bin/activate       # For macOS/Linux
-venv\Scripts\activate          # For Windows
-```
-
-### 3️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4️⃣ Configure Environment Variables
-Create a `.env` file in the project root directory:
-```
-OPENROUTER_API_KEY=your_openrouter_api_key_here
-```
-
-You can get your API key from [https://openrouter.ai](https://openrouter.ai).
-
-### 5️⃣ Run the Application
-```bash
-streamlit run app.py
-```
-
-The app will open in your browser at [http://localhost:8501](http://localhost:8501).
-
----
-
-##  Project Structure
-```
- Q&A-MultiModel-Chatbot
-├── app.py
-├── requirements.txt
-├── config.py
-├── utils/
-├── models/
-├── .env
-├── screenshots/
-│   ├── openai_models/
-│   ├── llama_models/
-│   └── comparison/
-└── README.md
-```
-
----
-
 ##  How Contextual Memory Works
 1. User queries are converted to embeddings using **SentenceTransformer** (`all-MiniLM-L6-v2`).  
 2. These vectors are stored in memory along with corresponding responses.  
@@ -140,19 +85,6 @@ All screenshots are stored in the **`/screenshots/`** folder.
 | `/screenshots/openai_models/` | GPT-4o and GPT-4o-mini outputs |
 | `/screenshots/llama_models/` | LLaMA-3 model outputs |
 | `/screenshots/comparison/` | Side-by-side comparisons |
-
----
-
-##  Example Usage
-
-**Prompt:**  
-> “What is the Model Context Protocol (MCP)?”
-
-**GPT-4o-mini (OpenAI):**
-- Structured, academic-style explanation with headers.
-
-**LLaMA-3-8B:**
-- Concise bullet-point summary with uncertainty notes.
 
 ---
 
